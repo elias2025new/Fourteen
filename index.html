@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#ff4d6d">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <!-- SEO Meta Tags -->
+    <title>For Fyori ❤️ - A Valentine's Surprise</title>
+    <meta name="description" content="A special Valentine's Day surprise for Fyori, made with love.">
+
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Floating Hearts Background -->
+    <div class="hearts-container" id="heartsContainer"></div>
+
+    <!-- Navigation Dots -->
+    <div class="nav-dots" id="navDots"></div>
+    <div class="swipe-hint" id="swipeHint">Swipe or tap to continue →</div>
+
+    <!-- Section 1: Intro -->
+    <section class="section intro-section active" id="section1">
+        <div class="content fade-in">
+            <h1 class="main-title">Hey Fyori ❤️</h1>
+            <p class="subtitle">I made something special just for you…</p>
+            <button class="cta-button" onclick="scrollToNext()">Tap to continue 💌</button>
+            <p class="install-hint">For the best surprise, tap menu ⋮ and choose 'Add to Home Screen' 💕</p>
+        </div>
+    </section>
+
+    <!-- Section 2: How We Met -->
+    <section class="section story-section" id="section2">
+        <div class="content fade-in">
+            <div class="story-text">
+                <p>When we first met I thought to myself what a very kind soul she is. That's my first ever thought of
+                    you, since then you have proven your kind heart and mind time and time again.</p>
+                <p>On our first date, I thought "holy shit she is soo beautiful" and in both those times I never thought
+                    we will be where we are now.</p>
+                <p class="highlight">I have fallen in love with you 😍 and I thought I couldn't!!</p>
+            </div>
+            <div class="slideshow-container">
+                <p class="gallery-hint" style="font-size: 0.8rem; color: #666; margin-bottom: 5px;">← Swipe photos →</p>
+                <div class="slideshow story-slideshow">
+                    <div class="slideshow-item">
+                        <img src="images/first.jpg" alt="Our first moment" class="memory-image">
+                    </div>
+                    <div class="slideshow-item">
+                        <img src="images/first1.jpg" alt="Another first moment" class="memory-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Reasons I Adore You -->
+    <section class="section reasons-section" id="section3">
+        <div class="content fade-in">
+            <h2 class="section-title">Reasons I Adore You</h2>
+            <p class="tap-hint"
+                style="font-size: 0.85rem; color: var(--light-red); margin-bottom: 20px; font-weight: 500;">✨ Tap a card
+                to reveal ✨</p>
+            <div class="cards-grid">
+                <div class="flip-card" onclick="flipCard(this)">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front" id="smileCard">
+                            <div class="card-emoji">😊</div>
+                            <h3>Your Smile</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Melts my heart tbh, everybody loves your smile but I am absolutely obsessed with your
+                                smile</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card" onclick="flipCard(this)">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front" id="kindnessCard">
+                            <div class="card-emoji">💝</div>
+                            <h3>Your Pure Kindness</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>You are such a kind heart, the way you think for everybody amazes me</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card" onclick="flipCard(this)">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front" id="faceCard">
+                            <div class="card-emoji">✨</div>
+                            <h3>Your Face</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>My favorite thing in the world is your face and your hands i love them 😭</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card" onclick="flipCard(this)">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front" id="usCard">
+                            <div class="card-emoji">💕</div>
+                            <h3>You & Me</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>My favorite person in the whole world is you my love. We have been together now more than
+                                a year and a half almost and we have been together supporting each other always and I
+                                love us so much - no drama no fuss just love</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Memory Gallery -->
+    <section class="section gallery-section" id="section4">
+        <div class="content fade-in">
+            <h2 class="section-title">Our Beautiful Memories</h2>
+            <p class="gallery-hint" style="font-size: 0.8rem; color: #666; margin-bottom: 10px;">← Swipe photos
+                left/right →</p>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="images/memory1.jpg" alt="Memory 1" class="gallery-image">
+                    <p class="gallery-caption">I am so comfortable with you that I take you anywhere say anything act
+                        however I like with you</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/memory2.jpg" alt="Memory 2" class="gallery-image">
+                    <p class="gallery-caption">I can't believe i have someone to look at me like that</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/memory3.jpg" alt="Memory 3" class="gallery-image">
+                    <p class="gallery-caption">Look at us pffff we would make greater looking children's fr❤️</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/memory4.jpg" alt="Memory 4" class="gallery-image">
+                    <p class="gallery-caption">You are my bby, my love , my wife, my soul mate, love having u beside me
+                    </p>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/memory5.jpg" alt="Memory 5" class="gallery-image">
+                    <p class="gallery-caption">My favorite place in the world is by your side.</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/memory6.jpg" alt="Memory 6" class="gallery-image">
+                    <p class="gallery-caption">I love the way we just click. ✨</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: The Question -->
+    <section class="section question-section" id="section5">
+        <div class="content fade-in">
+            <h2 class="question-intro">So I have one important question…</h2>
+            <div class="typing-animation" id="typingDots">
+                <span>.</span><span>.</span><span>.</span>
+            </div>
+            <div class="question-reveal" id="questionReveal">
+                <h1 class="big-question">Will you be my Valentine, Fyori? ❤️</h1>
+                <div class="button-group">
+                    <button class="answer-button yes-button" id="yesButton" onclick="handleYes()">💖 YES</button>
+                    <button class="answer-button maybe-button" id="maybeButton" onclick="handleMaybe()">🤔 Let me
+                        think…</button>
+                </div>
+            </div>
+            <div class="final-message" id="finalMessage">
+                <h2>Best decision of 2026 confirmed 💍❤️</h2>
+                <p class="screenshot-text">Screenshot this. This is the moment you officially became my Valentine.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meme Popup -->
+    <div class="meme-overlay" id="memeOverlay">
+        <img src="images/meme.jpg" alt="Meme" class="meme-image-popup">
+    </div>
+
+    <audio id="memeSound" src="Fahh-meme-sound-effect.m4a"></audio>
+
+    <!-- Confetti Container -->
+    <canvas id="confettiCanvas"></canvas>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
